@@ -1,9 +1,3 @@
-/**
- * @module
- *
- * This module contains simple utilities to get the type of any value and to know if provided type satisfies or exactly matching the value's type.
- */
-
 var cache = new WeakMap()
 
 /**
