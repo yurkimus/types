@@ -1,5 +1,7 @@
 {
   "name": "@yurkimus/types",
-  "version": "0.2.6",
-  "exports": "./source/index.js"
+  "version": "0.2.7",
+  "exports": {
+    "import": "./source/index.js"
+  }
 }
