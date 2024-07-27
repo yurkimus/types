@@ -2,35 +2,31 @@
 
 This module contains simple utilities to get the type of any value and to check if the provided type satisfies or exactly matches the value's type.
 
-## Module Overview
+## Overview
 
 ### Cache
 
-A `WeakMap` is used to cache the results of type checks for object instances to improve performance.
-
-## Usage
-
-This module can be used to determine the type of any value and to verify if a value matches a specific type or interface. It's useful for type checking in JavaScript applications.
+A [WeakMap](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap) is used to cache the results of type checks for object instances to improve performance.
 
 ### Example
 
 ```javascript
-import { type, is, isLike } from 'path/to/module'
+import { type, is, isLike } from '@yurkimus/types'
 
-console.log(type('Hello!')) // 'String'
-console.log(type(async () => {})) // 'AsyncFunction'
-console.log(type(new URLSearchParams())) // 'URLSearchParams'
+type('Hello!') // => 'String'
+type(async () => {}) // => 'AsyncFunction'
+type(new URLSearchParams()) // => 'URLSearchParams'
 
-console.log(is('String', 'abc')) // true
-console.log(is('Null', null)) // true
-console.log(is('Object', [])) // false
+is('String', 'abc') // => true
+is('Null', null) // => true
+is('Object', []) // => false
 
-console.log(isLike('Array', { length: 3 })) // true
-console.log(isLike('URL', window.location)) // true
-console.log(isLike('Function', { call: 'me' })) // false
+isLike('Array', { length: 3 }) // => true
+isLike('URL', window.location) // => true
+isLike('Function', { call: 'me' }) // => false
 ```
 
-## Error Handling
+### Error Handling
 
 The `isLike` function throws a `TypeError` if the check for the provided interface is not implemented.
 
@@ -51,9 +47,9 @@ Gets the type of a value as a string.w
 **Examples:**
 
 ```javascript
-type('Hello!') // returns 'String'
-type(async () => {}) // returns 'AsyncFunction'
-type(new URLSearchParams()) // returns 'URLSearchParams'
+type('Hello!') // => 'String'
+type(async () => {}) // => 'AsyncFunction'
+type(new URLSearchParams()) // => 'URLSearchParams'
 ```
 
 ### `is(string, value)`
@@ -72,9 +68,9 @@ Compares the provided type with the type of the provided value.
 **Examples:**
 
 ```javascript
-is('String', 'abc') // returns true
-is('Null', null) // returns true
-is('Object', []) // returns false
+is('String', 'abc') // => true
+is('Null', null) // => true
+is('Object', []) // => false
 ```
 
 ### `isLike(string, value)`
@@ -97,9 +93,9 @@ Tests if the provided value satisfies the provided interface.
 **Examples:**
 
 ```javascript
-isLike('Array', { length: 3 }) // returns true
-isLike('URL', window.location) // returns true
-isLike('Function', { call: 'me' }) // returns false
+isLike('Array', { length: 3 }) // => true
+isLike('URL', window.location) // => true
+isLike('Function', { call: 'me' }) // => false
 ```
 
 ## Contributions
@@ -109,7 +105,3 @@ Contributions are welcome! Please open an issue or submit a pull request on GitH
 ## License
 
 This project is licensed under the MIT License.
-
----
-
-This README provides an overview of the module's functionality, usage examples, and details on the API. You can customize and expand it based on your specific needs and preferences.
