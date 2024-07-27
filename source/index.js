@@ -1,3 +1,9 @@
+/**
+ * @module
+ *
+ * This module contains simple utilities to get the type of any value and to know if provided type satisfies or exactly matching the value's type.
+ */
+
 var cache = new WeakMap()
 
 /**
@@ -5,10 +11,16 @@ var cache = new WeakMap()
  *
  * @see {@link is}, {@link isLike}
  *
+ * @param {any} value
+ *
+ * @returns {string}
+ *
  * @example
- *  type('Hello!') // returns 'String'
- *  type(async () => {}) // returns 'AsyncFunction'
- *  type(new URLSearchParams()) // returns 'URLSearchParams'
+ * ```javascript
+ * type('Hello!') // returns 'String'
+ * type(async () => {}) // returns 'AsyncFunction'
+ * type(new URLSearchParams()) // returns 'URLSearchParams'
+ * ```
  */
 export var type = (value) => {
   switch (value instanceof Object) {
@@ -29,10 +41,17 @@ export var type = (value) => {
  *
  * @see {@link type}, {@link isLike}
  *
+ * @param {string} string
+ * @param {any} value
+ *
+ * @returns {boolean}
+ *
  * @example
- *  is('String', 'abc') // returns true
- *  is('Null', null) // returns true
- *  is('Object', []) // returns false
+ * ```javascript
+ * is('String', 'abc') // returns true
+ * is('Null', null) // returns true
+ * is('Object', []) // returns false
+ * ```
  */
 export var is = (string, value) => type(value) == string
 
@@ -41,12 +60,19 @@ export var is = (string, value) => type(value) == string
  *
  * @see {@link type}, {@link is}
  *
+ * @param {string} string
+ * @param {any} value
+ *
+ * @returns {boolean}
+ *
  * @throws {TypeError} Check for * is not implemented
  *
  * @example
+ * ```javascript
  *  isLike('Array', { length: 3 }) // returns true
  *  isLike('URL', window.location) // returns true
  *  isLike('Function', { call: 'me' }) // returns false
+ * ```
  */
 export var isLike = (string, value) => {
   switch (string) {
