@@ -28,11 +28,11 @@ isLike('Function', { call: 'me' }) // => false
 
 ### Error Handling
 
-The `isLike` function throws a `TypeError` if the check for the provided interface is not implemented.
+The `isLike` function throws a [TypeError](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError) if the check for the provided interface is not implemented.
 
 ## Functions
 
-### `type(value)`
+### `type`
 
 Gets the type of a value as a string.w
 
@@ -52,7 +52,7 @@ type(async () => {}) // => 'AsyncFunction'
 type(new URLSearchParams()) // => 'URLSearchParams'
 ```
 
-### `is(string, value)`
+### `is`
 
 Compares the provided type with the type of the provided value.
 
@@ -73,7 +73,7 @@ is('Null', null) // => true
 is('Object', []) // => false
 ```
 
-### `isLike(string, value)`
+### `isLike`
 
 Tests if the provided value satisfies the provided interface.
 
