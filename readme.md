@@ -1,4 +1,4 @@
-# Type Utilities Module
+# Types
 
 This module contains simple utilities to get the type of any value and to check if the provided type satisfies or exactly matches the value's type.
 
