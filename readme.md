@@ -1,5 +1,3 @@
-Sure, here is a detailed README documentation for your module:
-
 # Type Utilities Module
 
 This module contains simple utilities to get the type of any value and to check if the provided type satisfies or exactly matches the value's type.
