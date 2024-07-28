@@ -71,7 +71,7 @@ export var is = (string, value) => type(value) == string
 export var isLike = (string, value) => {
   switch (string) {
     case 'Promise':
-      return value && 'then' in value && isLike('Function', value.then)
+      return value && 'then' in value && typeof value.then == 'function'
 
     case 'Array':
       return value && 'length' in value
@@ -80,12 +80,7 @@ export var isLike = (string, value) => {
       return URL.canParse(value)
 
     case 'Function':
-      return (
-        value &&
-        'call' in value &&
-        typeof value.call == 'function' &&
-        'length' in value
-      )
+      return typeof value == 'function'
 
     default:
       throw new TypeError(`Check for ${string} is not implemented`)
