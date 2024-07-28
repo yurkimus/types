@@ -74,7 +74,7 @@ export var isLike = (string, value) => {
       return typeof value?.then == 'function'
 
     case 'Array':
-      return value && 'length' in value
+      return Number.isInteger(Number(value?.length))
 
     case 'URL':
       return URL.canParse(value)
