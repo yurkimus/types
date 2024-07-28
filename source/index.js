@@ -54,7 +54,7 @@ export var is = (string, value) => type(value) == string
  *
  * @see {@link type}, {@link is}
  *
- * @param {string} string
+ * @param {'Promise' | 'Array' | 'URL' | 'Function' | 'Iterable'} string
  * @param {any} value
  *
  * @returns {boolean}
@@ -71,7 +71,7 @@ export var is = (string, value) => type(value) == string
 export var isLike = (string, value) => {
   switch (string) {
     case 'Promise':
-      return value && 'then' in value && typeof value.then == 'function'
+      return typeof value?.then == 'function'
 
     case 'Array':
       return value && 'length' in value
@@ -81,6 +81,9 @@ export var isLike = (string, value) => {
 
     case 'Function':
       return typeof value == 'function'
+
+    case 'Iterable':
+      return typeof value?.[Symbol.iterator] == 'function'
 
     default:
       throw new TypeError(`Check for ${string} is not implemented`)
