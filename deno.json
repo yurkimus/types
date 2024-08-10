@@ -1,5 +1,0 @@
-{
-  "name": "@yurkimus/types",
-  "version": "0.3.1",
-  "exports": "./source/index.js"
-}
