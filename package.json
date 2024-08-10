@@ -1,7 +1,10 @@
 {
   "type": "module",
-  "private": false,
   "version": "0.0.0",
   "name": "@yurkimus/types",
-  "exports": "./source/index.js"
+  "exports": "./source/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yurkimus/types.git"
+  }
 }
