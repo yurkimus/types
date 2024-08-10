@@ -1,14 +1,18 @@
 {
   "type": "module",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "name": "@yurkimus/types",
   "author": {
     "name": "yurkimus",
     "email": "yurkimus@gmail.com"
   },
-  "exports": "./source/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/yurkimus/types.git"
+  },
+  "types": "./source/index.d.ts",
+  "exports": "./source/index.js",
+  "scripts": {
+    "generate-type-definitions": "npx tsc --declaration --emitDeclarationOnly --allowJs --outFile source/index.d.ts source/*"
   }
 }
