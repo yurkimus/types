@@ -5,7 +5,7 @@ JavaScript-first utilities to work with it's built-in types.
 ## Table of Contents
 
 - [Installation](#installation)
-- [Functions](#functions)
+- [Export](#export)
   - [type](#type)
   - [is](#is)
   - [isLike](#isLike)
@@ -33,7 +33,7 @@ npm install @yurkimus/types
 "@yurkimus/types": "https://raw.githubusercontent.com/yurkimus/types/main/source/index.js"
 ```
 
-## Functions
+## Export
 
 ### type
 
@@ -46,7 +46,7 @@ type :: * -> string
 #### Example:
 
 ```javascript
-type({}) // => 'Object'
+type({}); // => 'Object'
 ```
 
 ### is
@@ -60,7 +60,7 @@ is :: string -> * -> boolean
 #### Example:
 
 ```javascript
-is('Object', {}) // => true
+is("Object", {}); // => true
 ```
 
 ### isLike
@@ -74,7 +74,7 @@ isLike :: string -> * -> boolean
 #### Example:
 
 ```javascript
-isLike('Iterable', []) // => true
+isLike("Iterable", []); // => true
 ```
 
 ## License
