@@ -1,6 +1,6 @@
 {
   "type": "module",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "name": "@yurkimus/types",
   "author": {
     "name": "yurkimus",
@@ -10,9 +10,8 @@
     "type": "git",
     "url": "https://github.com/yurkimus/types.git"
   },
-  "types": "./source/index.d.ts",
   "exports": "./source/index.js",
-  "scripts": {
-    "generate-type-definitions": "npx tsc --declaration --emitDeclarationOnly --allowJs --outFile source/index.d.ts source/*"
+  "dependencies": {
+    "@yurkimus/curry": "github:yurkimus/curry"
   }
 }

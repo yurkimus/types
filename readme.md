@@ -2,10 +2,12 @@
 
 JavaScript-first utilities to work with it's built-in types.
 
+Functions with arity more than 1 are curried.
+
 ## Table of Contents
 
 - [Installation](#installation)
-- [Export](#export)
+- [Exports](#exports)
   - [type](#type)
   - [is](#is)
   - [isLike](#isLike)
@@ -33,7 +35,7 @@ npm install @yurkimus/types
 "@yurkimus/types": "https://raw.githubusercontent.com/yurkimus/types/main/source/index.js"
 ```
 
-## Export
+## Exports
 
 ### type
 
@@ -46,7 +48,7 @@ type :: * -> string
 #### Example:
 
 ```javascript
-type({}); // => 'Object'
+type({}) // => 'Object'
 ```
 
 ### is
@@ -60,7 +62,11 @@ is :: string -> * -> boolean
 #### Example:
 
 ```javascript
-is("Object", {}); // => true
+// Standard
+is('Object', {}) // => true
+
+// Curried
+is('Array')([]) // => true
 ```
 
 ### isLike
@@ -74,7 +80,11 @@ isLike :: string -> * -> boolean
 #### Example:
 
 ```javascript
-isLike("Iterable", []); // => true
+// Standard
+isLike("Iterable", []) // => true
+
+// Curried
+isLike("URL")(window.location) // => true
 ```
 
 ## License

@@ -1,3 +1,5 @@
+import { curry } from "@yurkimus/curry";
+
 var cache = new WeakMap();
 
 /**
@@ -45,7 +47,7 @@ export var type = (value) => {
  * is('Object', []) // returns false
  * ```
  */
-export var is = (string, value) => type(value) == string;
+export var is = curry((string, value) => type(value) == string);
 
 /**
  * Tests if the provided value satisfies provided interface
@@ -66,7 +68,7 @@ export var is = (string, value) => type(value) == string;
  *  isLike('Function', { call: 'me' }) // returns false
  * ```
  */
-export var isLike = (string, value) => {
+export var isLike = curry((string, value) => {
   switch (string) {
     case "Promise":
       return typeof value?.then == "function";
@@ -86,4 +88,4 @@ export var isLike = (string, value) => {
     default:
       throw new TypeError(`Check for "${string}" is not implemented`);
   }
-};
+});
