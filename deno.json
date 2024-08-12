@@ -1,0 +1,12 @@
+{
+  "name": "@yurkimus/types",
+  "version": "0.0.9",
+  "fmt": {
+    "semiColons": false,
+    "singleQuote": true
+  },
+  "exports": "./source/index.js",
+  "imports": {
+    "@yurkimus/curry": "npm:@yurkimus/curry"
+  }
+}

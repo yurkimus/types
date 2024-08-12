@@ -1,6 +1,6 @@
-import { curry } from "@yurkimus/curry";
+import { curry } from '@yurkimus/curry'
 
-var cache = new WeakMap();
+var cache = new WeakMap()
 
 /**
  * Gets the type of a value as a string.
@@ -23,12 +23,12 @@ export var type = (value) => {
     case true:
       return cache.has(value) ? cache.get(value) : cache
         .set(value, Object.prototype.toString.call(value).slice(8, -1))
-        .get(value);
+        .get(value)
 
     case false:
-      return Object.prototype.toString.call(value).slice(8, -1);
+      return Object.prototype.toString.call(value).slice(8, -1)
   }
-};
+}
 
 /**
  * Compares provided type with a type of provided object
@@ -47,7 +47,7 @@ export var type = (value) => {
  * is('Object', []) // returns false
  * ```
  */
-export var is = curry((string, value) => type(value) == string);
+export var is = curry((string, value) => type(value) == string)
 
 /**
  * Tests if the provided value satisfies provided interface
@@ -70,22 +70,22 @@ export var is = curry((string, value) => type(value) == string);
  */
 export var isLike = curry((string, value) => {
   switch (string) {
-    case "Promise":
-      return typeof value?.then == "function";
+    case 'Promise':
+      return typeof value?.then == 'function'
 
-    case "Array":
-      return Number.isInteger(Number(value?.length));
+    case 'Array':
+      return Number.isInteger(Number(value?.length))
 
-    case "URL":
-      return URL.canParse(value);
+    case 'URL':
+      return URL.canParse(value)
 
-    case "Function":
-      return typeof value == "function";
+    case 'Function':
+      return typeof value == 'function'
 
-    case "Iterable":
-      return typeof value?.[Symbol.iterator] == "function";
+    case 'Iterable':
+      return typeof value?.[Symbol.iterator] == 'function'
 
     default:
-      throw new TypeError(`Check for "${string}" is not implemented`);
+      throw new TypeError(`Check for "${string}" is not implemented`)
   }
-});
+})

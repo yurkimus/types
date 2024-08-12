@@ -1,0 +1,25 @@
+{
+  "version": "3",
+  "packages": {
+    "specifiers": {
+      "npm:@yurkimus/curry": "npm:@yurkimus/curry@0.0.3"
+    },
+    "npm": {
+      "@yurkimus/curry@0.0.3": {
+        "integrity": "sha512-LcI2/UScQRib8bZEbTfx4z/jjaPdAB/SB1UdJBCij4uQssp1pqc2sO7vhHkMnv4AAQcM3Piv8xJqufORbJ0Bew==",
+        "dependencies": {}
+      }
+    }
+  },
+  "remote": {},
+  "workspace": {
+    "dependencies": [
+      "npm:@yurkimus/curry"
+    ],
+    "packageJson": {
+      "dependencies": [
+        "npm:@yurkimus/curry"
+      ]
+    }
+  }
+}
