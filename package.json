@@ -1,6 +1,6 @@
 {
   "type": "module",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "name": "@yurkimus/types",
   "author": {
     "name": "yurkimus",
@@ -12,6 +12,6 @@
   },
   "exports": "./source/index.js",
   "dependencies": {
-    "@yurkimus/curry": "npm:@yurkimus/curry"
+    "@yurkimus/curry": "@yurkimus/curry"
   }
 }
