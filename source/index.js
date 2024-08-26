@@ -85,6 +85,9 @@ export var isLike = curry((string, value) => {
     case 'Iterable':
       return typeof value?.[Symbol.iterator] == 'function'
 
+    case 'Object':
+      return typeof value == 'object' && !is('Null', value)
+
     default:
       throw new TypeError(`Check for "${string}" is not implemented`)
   }
