@@ -2,15 +2,12 @@
 
 JavaScript-first utilities to work with it's built-in types.
 
-Functions with arity more than 1 are curried.
-
 ## Table of Contents
 
 - [Installation](#installation)
 - [Exports](#exports)
   - [type](#type)
   - [is](#is)
-  - [isLike](#isLike)
 - [License](#license)
 
 ## Installation
@@ -67,24 +64,6 @@ is('Object', {}) // => true
 
 // Curried
 is('Array')([]) // => true
-```
-
-### isLike
-
-#### Definition:
-
-```
-isLike :: string -> * -> boolean
-```
-
-#### Example:
-
-```javascript
-// Standard
-isLike("Iterable", []) // => true
-
-// Curried
-isLike("URL")(window.location) // => true
 ```
 
 ## License
