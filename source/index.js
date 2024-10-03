@@ -1,4 +1,8 @@
 /**
+ * @typedef { 'Undefined' | 'Null' | 'Symbol' | 'Boolean' | 'Number' | 'String' | 'Object' | 'Array' | 'Arguments' | 'Function' | 'AsyncFunction' | 'GeneratorFunction' | 'BigInt' | 'Date' | 'RegExp' | 'Map' | 'Set' | 'WeakMap' | 'WeakSet' | 'WeakRef' | 'Promise' | 'Generator' | 'Proxy' | 'Error' | 'EvalError' | 'RangeError' | 'ReferenceError' | 'SyntaxError' | 'TypeError' | 'URIError' | 'AggregateError' | 'Intl.Collator' | 'Intl.DateTimeFormat' | 'Intl.NumberFormat' | 'ArrayBuffer' | 'SharedArrayBuffer' | 'DataView' } Types
+ */
+
+/**
  * Gets the type of a value as a string.
  *
  * @see {@link is}, {@link isLike}

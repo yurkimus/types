@@ -1,6 +1,6 @@
 {
   "type": "module",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "name": "@yurkimus/types",
   "author": {
     "name": "yurkimus",
@@ -10,6 +10,5 @@
     "type": "git",
     "url": "https://github.com/yurkimus/types.git"
   },
-  "exports": "./source/index.js",
-  "types": "./source/index.d.ts"
+  "exports": "./source/index.js"
 }
