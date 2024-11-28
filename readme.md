@@ -59,11 +59,7 @@ is :: string -> * -> boolean
 #### Example:
 
 ```javascript
-// Standard
 is('Object', {}) // => true
-
-// Curried
-is('Array')([]) // => true
 ```
 
 ## License
