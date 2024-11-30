@@ -1,6 +1,8 @@
 {
+  "type": "module",
+
   "name": "@yurkimus/types",
-  "version": "0.2.0",
+  "version": "0.2.1",
 
   "author": "yurkimus <yurkimus@gmail.com>",
 
@@ -9,5 +11,10 @@
     "url": "https://github.com/yurkimus/types.git"
   },
 
-  "exports": "./source/index.js"
+  "exports": {
+    ".": {
+      "types": "./source/index.d.ts",
+      "import": "./source/index.js"
+    }
+  }
 }
