@@ -1,5 +1,7 @@
-#macOS
+# macOS
+
 .DS_Store
 
-# dependencies
+# Dependencies
+
 node_modules
