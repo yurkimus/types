@@ -1,7 +1,7 @@
+import { curry } from '@yurkimus/curry'
+
 /**
  * Gets the type of a value as a string.
- *
- * @param {*} value
  *
  * @see {@link is}
  *
@@ -21,16 +21,13 @@ export let type = value =>
 /**
  * Compares provided type with a type of provided object
  *
- * @param {string} key
- * @param {*} value
- *
  * @see {@link type}
  *
  * @example
  * ```javascript
  * is('String', 'abc') // returns true
  * is('Null', null) // returns true
- * is('Object', []) // returns false
+ * is('Object')([]) // returns false
  * ```
  */
-export let is = (key, value) => type(value) === key
+export let is = curry((key, value) => type(value) === key)
