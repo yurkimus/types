@@ -1,0 +1,21 @@
+{
+  "version": "4",
+  "specifiers": {
+    "npm:@yurkimus/curry@0.1.0": "0.1.0"
+  },
+  "npm": {
+    "@yurkimus/curry@0.1.0": {
+      "integrity": "sha512-1eCQhNMLDZQpF2iOgSk7B6Mmg9tM65TsTV4jPsf5nk0yrhIlvouggm0HSTreYsvqgaFZPHEg60N1LcU2smpIHQ=="
+    }
+  },
+  "workspace": {
+    "dependencies": [
+      "npm:@yurkimus/curry@0.1.0"
+    ],
+    "packageJson": {
+      "dependencies": [
+        "npm:@yurkimus/curry@0.1.0"
+      ]
+    }
+  }
+}

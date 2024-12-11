@@ -1,20 +1,19 @@
 {
   "type": "module",
-
   "name": "@yurkimus/types",
-  "version": "0.2.1",
-
+  "version": "0.2.2",
   "author": "yurkimus <yurkimus@gmail.com>",
-
   "repository": {
     "type": "git",
     "url": "https://github.com/yurkimus/types.git"
   },
-
   "exports": {
-    ".": {
-      "types": "./source/index.d.ts",
-      "import": "./source/index.js"
-    }
+    "types": "./source/index.d.ts",
+    "import": "./source/index.js",
+    "require": "./source/index.js",
+    "default": "./source/index.js"
+  },
+  "dependencies": {
+    "@yurkimus/curry": "0.1.0"
   }
 }
