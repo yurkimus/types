@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "@yurkimus/types",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "author": "yurkimus <yurkimus@gmail.com>",
   "repository": {
     "type": "git",
@@ -14,6 +14,6 @@
     "default": "./source/index.js"
   },
   "dependencies": {
-    "@yurkimus/curry": "0.1.0"
+    "@yurkimus/curry": "0.1.1"
   }
 }
